@@ -141,9 +141,9 @@ const Dashboard = () => {
                     </div>
                   </div>
                   {letter.isUnlocked && (
-                    <button className="px-4 py-2 bg-primary/20 hover:bg-primary/30 text-primary rounded-lg text-sm font-medium transition-colors">
+                    <Link to={`/letter/${letter._id}`} className="px-4 py-2 bg-primary/20 hover:bg-primary/30 text-primary rounded-lg text-sm font-medium transition-colors">
                       Read Now
-                    </button>
+                    </Link>
                   )}
                 </motion.div>
               ))}
@@ -173,25 +173,25 @@ const Dashboard = () => {
               </div>
             </Link>
             
-            <button className="glass p-5 rounded-2xl flex items-center gap-4 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all group text-left w-full">
+            <Link to="/memories" className="glass p-5 rounded-2xl flex items-center gap-4 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all group text-left w-full">
               <div className="p-3 bg-blue-500/10 rounded-xl group-hover:bg-blue-500 group-hover:text-white transition-colors">
                 <ImageIcon className="w-6 h-6 text-blue-500 group-hover:text-white" />
               </div>
               <div>
-                <h4 className="font-semibold">Add Memory</h4>
-                <p className="text-xs text-foreground/60">Upload a photo/video</p>
+                <h4 className="font-semibold">Memory Vault</h4>
+                <p className="text-xs text-foreground/60">View and seal memories</p>
               </div>
-            </button>
+            </Link>
 
-            <button className="glass p-5 rounded-2xl flex items-center gap-4 hover:border-green-500/50 hover:bg-green-500/5 transition-all group text-left">
+            <Link to="/goals" className="glass p-5 rounded-2xl flex items-center gap-4 hover:border-green-500/50 hover:bg-green-500/5 transition-all group text-left w-full">
               <div className="p-3 bg-green-500/10 rounded-xl group-hover:bg-green-500 group-hover:text-white transition-colors">
                 <Target className="w-6 h-6 text-green-500 group-hover:text-white" />
               </div>
               <div>
-                <h4 className="font-semibold">Set a Goal</h4>
+                <h4 className="font-semibold">Goals</h4>
                 <p className="text-xs text-foreground/60">Track your progress</p>
               </div>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

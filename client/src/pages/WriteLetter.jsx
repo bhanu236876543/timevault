@@ -13,6 +13,7 @@ const WriteLetter = () => {
   const [formData, setFormData] = useState({
     title: '',
     content: '',
+    recipientEmail: '',
     moodCategory: 'Hopeful',
     unlockDate: ''
   });
@@ -77,6 +78,17 @@ const WriteLetter = () => {
               onChange={(e) => setFormData({...formData, title: e.target.value})}
               className="w-full bg-background/50 border border-border rounded-xl py-3 px-4 text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all font-medium text-lg"
               placeholder="e.g., To myself in 5 years..."
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="block text-sm font-medium text-foreground/80">Recipient Email (Optional)</label>
+            <input 
+              type="email" 
+              value={formData.recipientEmail}
+              onChange={(e) => setFormData({...formData, recipientEmail: e.target.value})}
+              className="w-full bg-background/50 border border-border rounded-xl py-3 px-4 text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all font-medium text-lg"
+              placeholder="Who should receive this when it unlocks?"
             />
           </div>
 

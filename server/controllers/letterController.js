@@ -2,11 +2,12 @@ const Letter = require('../models/Letter');
 
 exports.createLetter = async (req, res) => {
   try {
-    const { title, content, moodCategory, unlockDate } = req.body;
+    const { title, content, recipientEmail, moodCategory, unlockDate } = req.body;
     const newLetter = new Letter({
       user: req.user,
       title,
       content,
+      recipientEmail,
       moodCategory,
       unlockDate: new Date(unlockDate)
     });

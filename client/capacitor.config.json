@@ -1,0 +1,8 @@
+{
+  "appId": "com.timevault.app",
+  "appName": "TimeVault",
+  "webDir": "dist",
+  "server": {
+    "cleartext": true
+  }
+}
